@@ -43,7 +43,7 @@ if (!class_exists('AuthPlugin') || !interface_exists('iAuthPlugin'))
      * Auth Plug-in
      *
      */
-    require_once './includes/AuthPlugin.php';
+    require_once dirname(__FILE__).'./../../includes/AuthPlugin.php';
 
     /**
      * Auth Plug-in Interface
