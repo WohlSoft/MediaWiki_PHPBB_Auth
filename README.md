@@ -22,9 +22,7 @@ You will need to put the name you choose in the code below.
 **PHPBB GROUP NOTE**: In order for a user to be able to use the wiki they will need to  
 be a member of the group you made in the step above.
 
-* Put Auth_phpBB.php in /extensions/Auth_phpBB  
-* Put iAuthPlugin.php in /extensions/Auth_phpBB  
-* Put PasswordHash.php in /extensions/Auth_phpBB  
+* Copy Auth_phpBB folder into /extensions/
 
 ### OPTIONAL PHPBB-TO-MEDIAWIKI USERNAME TRANSLATION FEATURE:  
 phpBB usernames can be translated to more restrictive wiki usernames.  
