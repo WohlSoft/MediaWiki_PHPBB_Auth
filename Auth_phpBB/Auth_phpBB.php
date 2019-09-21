@@ -43,13 +43,13 @@ if (!class_exists('AuthPlugin') || !interface_exists('iAuthPlugin'))
      * Auth Plug-in
      *
      */
-    require_once dirname(__FILE__).'./../../includes/AuthPlugin.php';
+    require_once dirname(__FILE__) . '/../../includes/AuthPlugin.php';
 
     /**
      * Auth Plug-in Interface
      *
      */
-    require_once dirname(__FILE__).'/iAuthPlugin.php';
+    require_once dirname(__FILE__) . '/iAuthPlugin.php';
 
 }
 
@@ -68,7 +68,7 @@ if (!class_exists('PasswordHash'))
      *      http://www.openwall.com/phpass/
      *
      */
-    require_once './extensions/PasswordHash.php';
+    require_once dirname(__FILE__) . '/PasswordHash.php';
 }
 
 /**
