@@ -2,13 +2,13 @@
 
 if (!class_exists('Auth_phpBB'))
 {
-    require_once './extensions/Auth_phpBB/Auth_phpBB.php';
+    require_once __DIR__ . '/Auth_phpBB.php';
 }
 
 
 if (!class_exists('User'))
 {
-    require_once './includes/User.php';
+    require_once __DIR__ . '/../../includes/User.php';
 }
 
 if (!interface_exists('iUser'))
@@ -17,11 +17,11 @@ if (!interface_exists('iUser'))
      * Auth Plug-in Interface
      *
      */
-    require_once './extensions/Auth_phpBB/iUser.php';
+    require_once __DIR__ . '/iUser.php';
 
 }
 
- class User_phpBB extends User implements iUser
+class User_phpBB extends User implements iUser
 {
 
     public function getCanonicalName( $name, $validate = 'valid')

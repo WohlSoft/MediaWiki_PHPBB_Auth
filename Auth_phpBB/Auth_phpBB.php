@@ -38,27 +38,29 @@
 
 // First check if class and interface has already been defined.
 
+use MediaWiki\Auth\AuthManager;
+use MediaWiki\Auth\PasswordAuthenticationRequest;
+use MediaWiki\Status;
 
 
 if (!class_exists('AuthenticationRequest'))
 {
-    require_once './includes/auth/AuthenticationRequest.php';
+    require_once __DIR__ . '/../../includes/auth/AuthenticationRequest.php';
 }
 
 if (!class_exists('PasswordAuthenticationRequest'))
 {
-    require_once './includes/auth/PasswordAuthenticationRequest.php';
+    require_once __DIR__ . '/../../includes/auth/PasswordAuthenticationRequest.php';
 }
 
 if (!class_exists('AuthManager'))
 {
-    require_once './includes/auth/AuthManager.php';
-
+    require_once __DIR__ . '/../../includes/auth/AuthManager.php';
 }
 
 if (!class_exists('Status'))
 {
-    require_once './includes/Status.php';
+    require_once __DIR__ . '/../../includes/Status.php';
 }
 
 if (!interface_exists('iAuthManager '))
@@ -67,7 +69,7 @@ if (!interface_exists('iAuthManager '))
      * Auth Plug-in Interface
      *
      */
-    require_once './extensions/Auth_phpBB/iAuthManager.php';
+    require_once __DIR__ . '/iAuthManager.php';
 
 }
 
@@ -857,7 +859,12 @@ class Auth_phpBB extends AuthManager implements iAuthManager
             'label' =>  $this->_LoginMessage
         ];
 
-        $formDescriptor['Auth_phpBB'] = $descriptor
+        $formDescriptor['Auth_phpBB'] = $descriptor;
+        return true;
+    }
+
+    public function onUserLoginComplete(User &$user, &$inject_html, $direct )
+    {
         return true;
     }
 
