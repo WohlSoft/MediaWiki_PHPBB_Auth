@@ -63,14 +63,13 @@ if (!class_exists('Status'))
     require_once __DIR__ . '/../../includes/Status.php';
 }
 
-if (!interface_exists('iAuthManager '))
+if (!interface_exists('iAuthManager'))
 {
     /**
-     * Auth Plug-in Interface
+     * Auth Manager Interface
      *
      */
     require_once __DIR__ . '/iAuthManager.php';
-
 }
 
 // First check if the PasswordHash class has already been defined.
